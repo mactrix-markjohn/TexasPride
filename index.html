@@ -1,7 +1,23 @@
 <!DOCTYPE html>
 <html>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
- 
+
+<head>
+    <title>&lt;model-viewer&gt; example</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="stylesheet" href="demo-styles.css"> -->
+    
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!-- 💁 OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+
+  </head> 
+<!-- <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  -->
 <style>
     model-viewer {
         width: 100%;
@@ -10,10 +26,22 @@
 </style>
    
 <body>
+    <script type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
     
-    <model-viewer 
+    <!-- <model-viewer 
         src="public/TXP_Gooseneck_Tandem_Axle_14K.usdz" 
         ar>
+    </model-viewer> -->
+
+    <model-viewer src="/public/TXP_Gooseneck_Tandem_Axle_14K.glb"
+                  ios-src="/public/TXP_Gooseneck_Tandem_Axle_14K.usdz"
+                  poster="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b%2Fposter-astronaut.png?v=1599079951717"
+                  alt="A 3D model of a Trailer"
+                  shadow-intensity="1"
+                  camera-controls
+                  auto-rotate ar>
     </model-viewer>
 </body>
 </html>
